@@ -10,6 +10,8 @@ const TransactionCard = ({ addressTo, addressFrom, timestamp, message, keyword, 
 
     const gifUrl = useFetch({ keyword })
 
+    console.log('gifUrl',gifUrl)
+    
     return (
         <div className='bg-[#181918] m-4 flex flex-1 
             2xl:min-w-[450px]
