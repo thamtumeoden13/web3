@@ -44,7 +44,7 @@ export const TransactionProvider = ({ children }) => {
                 return {
                     addressFrom: transaction.sender,
                     addressTo: transaction.receiver,
-                    timstamp: new Date(transaction.timestamp.toNumber() * 1000).toLocaleString(),
+                    timestamp: new Date(transaction.timestamp.toNumber() * 1000).toLocaleString(),
                     message: transaction.message,
                     keyword: transaction.keyword,
                     amount: parseInt(transaction.amount._hex) / (10 ** 18)
@@ -108,7 +108,7 @@ export const TransactionProvider = ({ children }) => {
             console.log('connectWallet', accounts)
 
             setCurrentAccount(accounts[0])
-            
+
             window.location.reload();
         } catch (error) {
             console.log(error)
